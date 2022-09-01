@@ -15,7 +15,10 @@
   "dependencies": {
     "@michaelray/console-color": "2.0.0-d",
     "koa": "^2.13.4",
-    "koa-logger": "^3.2.1"
+    "koa-logger": "^3.2.1",
+    "mysql": "^2.18.1",
+    "mysqls": "^1.2.2",
+    "uuid": "^8.3.2"
   },
   "devDependencies": {
     "nodemon": "^2.0.19"
