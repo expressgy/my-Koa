@@ -1,0 +1,25 @@
+PS C:\Users\x7129\Desktop\my-Koa> koa2 koaGenerator
+
+   create : koaGenerator
+   create : koaGenerator/package.json
+   create : koaGenerator/app.js
+   create : koaGenerator/public/stylesheets
+   create : koaGenerator/public/stylesheets/style.css
+   create : koaGenerator/public/images
+   create : koaGenerator/public/javascripts
+   create : koaGenerator/public
+   create : koaGenerator/routes
+   create : koaGenerator/routes/index.js
+   create : koaGenerator/routes/users.js
+   create : koaGenerator/views
+   create : koaGenerator/views/index.pug
+   create : koaGenerator/views/layout.pug
+   create : koaGenerator/views/error.pug
+   create : koaGenerator/bin
+   create : koaGenerator/bin/www
+
+   install dependencies:
+     > cd koaGenerator && npm install
+
+   run the app:
+     > SET DEBUG=koa* & npm start koaGenerator

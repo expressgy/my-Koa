@@ -1,0 +1,23 @@
+{
+  "name": "myKao",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node bin/www.js",
+    "dev": "./node_modules/.bin/nodemon bin/www.js",
+    "prd": "pm2 start bin/www"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@michaelray/console-color": "2.0.0-d",
+    "koa": "^2.13.4",
+    "koa-logger": "^3.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
+}
