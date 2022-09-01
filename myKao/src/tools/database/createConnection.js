@@ -2,7 +2,7 @@
  * 创建数据库连接
  * */
 const mysql = require("mysql");
-const config = require("../../config/default.config");
+const config = require("../../../config/default.config");
 
 function createConnectionNull() {
     return new Promise((rec, rej) => {

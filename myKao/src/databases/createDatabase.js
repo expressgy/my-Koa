@@ -1,6 +1,6 @@
 const mysql = require('mysql')
     , config  = require('../../config/default.config')
-    , { createConnectionNull } = require('./createConnection')
+    , { createConnectionNull } = require('../tools/database/createConnection')
 
 module.exports = run
 
@@ -18,7 +18,7 @@ function run(){
         try{
             //  新建数据库成功
             rec(await createDatabase(connect.data))
-            connect.destroy()
+            connect.data.destroy()
         }catch (e){
             //  新建数据库失败
             rej(e)
