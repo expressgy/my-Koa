@@ -10,6 +10,10 @@ const tableNameList = [
     {
         name: "user_info",
         comment: "用户信息表",
+    },
+    {
+        name: "user_info_other",
+        comment: "用户其他信息表"
     }
 ]
 
@@ -98,7 +102,76 @@ const user_info = {
     ]
 }
 
+//  用户其他信息表
+const user_info_other = {
+    tableName: "user_info_other",
+    comment: "用户其他信息表",
+    field: [
+        {
+            name: "user_uuid",
+            type: "VARCHAR(32)",
+            attribute: ["PRIMARY KEY"],
+            comment: "用户的UUID 主键"
+        },
+        {
+            name: "resident_id",
+            type: "VARCHAR(18)",
+            attribute: ["NOT NULL"],
+            comment: "身份证"
+        },
+        {
+            name: "address",
+            type: "BIGINT(18)",
+            attribute: ["NOT NULL"],
+            comment: "住址"
+        },
+        {
+            name: "sex",
+            type: "INT(1)",
+            attribute: ["NOT NULL", "DEFAULT 9"],
+            comment: "性别"
+        },
+        {
+            name: "birthday",
+            type: "INT(8)",
+            attribute: ["NOT NULL"],
+            comment: "出生日期"
+        },
+        {
+            name: "nick_name",
+            type: "VARCHAR(32)",
+            attribute: ["NOT NULL"],
+            comment: "昵称"
+        },
+        {
+            name: "personal_profile",
+            type: "VARCHAR(256)",
+            attribute: ["NOT NULL"],
+            comment: "个人简介"
+        },
+        {
+            name: "slogan",
+            type: "VARCHAR(64)",
+            attribute: ["NOT NULL"],
+            comment: "标语"
+        },
+        {
+            name: "avatar",
+            type: "VARCHAR(64)",
+            attribute: ["NOT NULL"],
+            comment: "头像"
+        },
+        {
+            name: "background",
+            type: "VARCHAR(64)",
+            attribute: ["NOT NULL"],
+            comment: "背景"
+        },
+
+    ]
+}
 module.exports = {
     user_login,
-    user_info
+    user_info,
+    user_info_other
 }
