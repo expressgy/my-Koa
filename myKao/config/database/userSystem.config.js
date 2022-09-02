@@ -167,6 +167,18 @@ const user_info_other = {
             attribute: ["NOT NULL"],
             comment: "背景"
         },
+        {
+            name: "phone",
+            type: "BIGINT(11)",
+            attribute: ["NOT NULL"],
+            comment: "电话"
+        },
+        {
+            name: "mail",
+            type: "VARCHAR(64)",
+            attribute: ["NOT NULL"],
+            comment: "邮箱"
+        },
 
     ]
 }
