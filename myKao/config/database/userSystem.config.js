@@ -14,6 +14,18 @@ const tableNameList = [
     {
         name: "user_info_other",
         comment: "用户其他信息表"
+    },{
+        tableName: "user_role",
+        comment: "角色表",
+    },{
+        tableName: "user_authority",
+        comment: "权限表",
+    },{
+        tableName: "user_relation_role",
+        comment: "用户角色关联表",
+    },{
+        tableName: "user_relation_authority",
+        comment: "用户权限关联表",
     }
 ]
 
@@ -179,11 +191,117 @@ const user_info_other = {
             attribute: ["NOT NULL"],
             comment: "邮箱"
         },
-
     ]
 }
+
+//  角色表
+const user_role = {
+    tableName: "user_role",
+    comment: "角色表",
+    field: [
+        {
+            name: "id",
+            type: "INT",
+            attribute: ["AUTO_INCREMENT", "PRIMARY KEY"],
+            comment: "自增id"
+        },
+        {
+            name: "role_name",
+            type: "VARCHAR(32)",
+            attribute: ["NOT NULL"],
+            comment: "角色名称"
+        },
+        {
+            name: "role_remarks",
+            type: "VARCHAR(128)",
+            attribute: ["DEFAULT '角色备注'"],
+            comment: "角色备注"
+        },
+    ]
+}
+
+//  权限表
+const user_authority = {
+    tableName: "user_authority",
+    comment: "权限表",
+    field: [
+        {
+            name: "id",
+            type: "INT",
+            attribute: ["AUTO_INCREMENT", "PRIMARY KEY"],
+            comment: "自增id"
+        },
+        {
+            name: "authority_name",
+            type: "VARCHAR(32)",
+            attribute: ["NOT NULL"],
+            comment: "权限名称"
+        },
+        {
+            name: "authority_remarks",
+            type: "VARCHAR(128)",
+            attribute: ["DEFAULT '权限备注'"],
+            comment: "权限备注"
+        },
+    ]
+}
+//  角色关联表
+const user_relation_role = {
+    tableName: "user_relation_role",
+    comment: "用户角色关联表",
+    field: [
+        {
+            name: "id",
+            type: "INT",
+            attribute: ["AUTO_INCREMENT", "PRIMARY KEY"],
+            comment: "自增id"
+        },
+        {
+            name: "user_uuid",
+            type: "VARCHAR(32)",
+            attribute: ["NOT NULL"],
+            comment: "用户uuid"
+        },
+        {
+            name: "role_id",
+            type: "INT",
+            attribute: ["DEFAULT 0"],
+            comment: "角色id"
+        },
+    ]
+}
+//  权限关联表
+const user_relation_authority = {
+    tableName: "user_relation_authority",
+    comment: "用户权限关联表",
+    field: [
+        {
+            name: "id",
+            type: "INT",
+            attribute: ["AUTO_INCREMENT", "PRIMARY KEY"],
+            comment: "自增id"
+        },
+        {
+            name: "user_uuid",
+            type: "VARCHAR(32)",
+            attribute: ["NOT NULL"],
+            comment: "用户uuid"
+        },
+        {
+            name: "authority_id",
+            type: "INT",
+            attribute: ["DEFAULT 0"],
+            comment: "权限id"
+        },
+    ]
+}
+
 module.exports = {
     user_login,
     user_info,
-    user_info_other
+    user_info_other,
+    user_role,
+    user_authority,
+    user_relation_role,
+    user_relation_authority
 }
