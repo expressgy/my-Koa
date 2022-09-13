@@ -63,7 +63,7 @@ const user_login = {
         },
         {
             name: "user_password",
-            type: "VARCHAR(256)",
+            type: "VARCHAR(128)",
             attribute: ["NOT NULL"],
             comment: "加密密码"
         },
@@ -110,6 +110,24 @@ const user_info = {
             type: "INT(1)",
             attribute: ["NOT NULL", "DEFAULT 0"],
             comment: "可用状态"
+        },
+        {
+            name: "resident_id",
+            type: "VARCHAR(18)",
+            attribute: ["NOT NULL"],
+            comment: "身份证"
+        },
+        {
+            name: "phone",
+            type: "BIGINT(11)",
+            attribute: ["NOT NULL"],
+            comment: "电话"
+        },
+        {
+            name: "mail",
+            type: "VARCHAR(64)",
+            attribute: ["NOT NULL"],
+            comment: "邮箱"
         },
     ]
 }
@@ -236,6 +254,24 @@ const user_authority = {
             type: "VARCHAR(32)",
             attribute: ["NOT NULL"],
             comment: "权限名称"
+        },
+        {
+            name: "type",
+            type: "INT(2)",
+            attribute: ["DEFAULT 0"],
+            comment: "权限类型"
+        },
+        {
+            name: "grade",
+            type: "INT(2)",
+            attribute: ["DEFAULT 0"],
+            comment: "权限类型"
+        },
+        {
+            name: "sequence",
+            type: "INT(3)",
+            attribute: ["DEFAULT 0"],
+            comment: "序列"
         },
         {
             name: "authority_remarks",
