@@ -53,6 +53,7 @@ app.use(printMethod());
 app.use(koaBody({
     multipart:true, // 支持文件上传
     encoding:'gzip',
+    strict:false,//  参数:如果启用，则不解析GET，HEAD，DELETE请求，默认为true
     formidable:{
         // uploadDir:path.join(__dirname,'public/upload/'), // 设置文件上传目录
         keepExtensions: true,    // 保持文件的后缀
