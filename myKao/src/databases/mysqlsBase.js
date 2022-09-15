@@ -87,6 +87,7 @@ module.exports = {
     DELETE,
     UPDATE,
     SELECT,
+    sql,
     exec,
     transaction,
     SIMP

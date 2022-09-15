@@ -90,8 +90,7 @@ async function databaseOperation() {
         const rec = await createDatabase()
         console.s(rec.message)
     } catch (e) {
-        console.e('ERROR'.red, e)
-        throw (e)
+        throw new Error(e.message)
     }
 
     try {
@@ -103,8 +102,7 @@ async function databaseOperation() {
             console.s('创建用户系统表成功！')
         }
     } catch (e) {
-        console.error('ERROR'.red, e)
-        throw (e)
+        throw new Error(e.message)
     }
 }
 setTimeout(other)

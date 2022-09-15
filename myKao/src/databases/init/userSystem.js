@@ -12,6 +12,7 @@ function run() {
         } catch (e) {
             //  数据库连接失败
             rej(e)
+            return
         }
 
         /**
