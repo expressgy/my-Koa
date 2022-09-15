@@ -5,7 +5,7 @@ module.exports = {
     DATABASE_INIT:{
         host: 'localhost',
         user: 'root',
-        password:'Hxl1314521',
+        password:'root',
         database: "mykoa",
         port: 3306,
     },
@@ -20,6 +20,7 @@ module.exports = {
         sign:{
             mailVerf: false,//  邮箱验证注册
             phoneVerf:false,//  手机验证注册
+            length:4,
         }
     }
 }

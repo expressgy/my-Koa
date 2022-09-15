@@ -33,7 +33,7 @@ async function start(){
  * */
 function onListening(port){
     console.clear();
-    console.info(`> Web System Name ${config.PROJECT_NAME.red}`)
+    console.info(`> Web System Name ${config.PROJECT_NAME}`)
     console.info(`> httpServer listening in http://localhost:${config.PORT}`);
     const startedTime = new Date().getTime()
     console.timeEnd('> Web Start Use'.blue)

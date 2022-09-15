@@ -30,6 +30,8 @@ const {
     createUserTable
 } = require('./src/databases/init');
 
+global.path = __dirname
+
 /**
  * 路由
  * */
@@ -108,5 +110,6 @@ async function databaseOperation() {
 setTimeout(other)
 function other(){
     console.w('other')
+    console.w(global.path)
 }
 module.exports = app;

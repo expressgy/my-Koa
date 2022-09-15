@@ -112,7 +112,7 @@ const user_info = {
             comment: "可用状态"
         },
         {
-            name: "resident_id",
+            name: "person_id",
             type: "VARCHAR(18)",
             attribute: ["NOT NULL"],
             comment: "身份证"
@@ -144,14 +144,20 @@ const user_info_other = {
             comment: "用户的UUID 主键"
         },
         {
-            name: "resident_id",
+            name: "person_id",
             type: "VARCHAR(18)",
             attribute: ["NOT NULL"],
             comment: "身份证"
         },
         {
             name: "address",
-            type: "BIGINT(18)",
+            type: "VARCHAR(256)",
+            attribute: ["NOT NULL"],
+            comment: "住址"
+        },
+        {
+            name: "country",
+            type: "VARCHAR(256)",
             attribute: ["NOT NULL"],
             comment: "住址"
         },
@@ -169,7 +175,7 @@ const user_info_other = {
         },
         {
             name: "nick_name",
-            type: "VARCHAR(32)",
+            type: "VARCHAR(64)",
             attribute: ["NOT NULL"],
             comment: "昵称"
         },
@@ -205,9 +211,15 @@ const user_info_other = {
         },
         {
             name: "mail",
-            type: "VARCHAR(64)",
+            type: "VARCHAR(128)",
             attribute: ["NOT NULL"],
             comment: "邮箱"
+        },
+        {
+            name: "updatetime",
+            type: "BIGINT(13)",
+            attribute: ["NOT NULL"],
+            comment: "信息最新时间"
         },
     ]
 }
